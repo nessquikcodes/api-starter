@@ -11,6 +11,7 @@ def health() -> HealthResponse:
     """Return service status. Never raises."""
     return HealthResponse(status="ok", app=settings.app_name)
 
+
 @app.get("/items/{item_id}")
 def get_item(item_id: int):
     """Return a single item by id."""
