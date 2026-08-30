@@ -1,0 +1,26 @@
+[project]
+name = "api-starter"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = ["fastapi", "uvicorn", "pydantic-settings"]
+
+[project.optional-dependencies]
+dev = ["pytest", "httpx2", "ruff"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["app*"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "BLE", "D103"]
+# E722 (bare except) is in "E". BLE001 catches "except Exception:".
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["D103"]
