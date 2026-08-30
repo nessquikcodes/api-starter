@@ -10,6 +10,7 @@ def test_health_returns_ok():
     assert resp.status_code == 200
     assert resp.json() == {"status": "ok", "app": "api-starter"}
 
+
 def test_get_item_returns_item():
     resp = client.get("/items/7")
     assert resp.status_code == 200

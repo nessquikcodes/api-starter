@@ -6,7 +6,8 @@ class HealthResponse(BaseModel):
 
     status: str
     app: str
-    
+
+
 class ItemResponse(BaseModel):
     """Response body for GET /items/{item_id}."""
 
