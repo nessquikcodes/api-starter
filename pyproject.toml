@@ -5,7 +5,7 @@ requires-python = ">=3.12"
 dependencies = ["fastapi", "uvicorn", "pydantic-settings"]
 
 [project.optional-dependencies]
-dev = ["pytest", "httpx2", "ruff"]
+dev = ["pytest", "httpx", "ruff"]
 
 [build-system]
 requires = ["setuptools>=68"]

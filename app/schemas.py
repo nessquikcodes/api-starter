@@ -8,6 +8,12 @@ class HealthResponse(BaseModel):
     app: str
 
 
+class ItemCreate(BaseModel):
+    """Request body for POST /items."""
+
+    name: str
+
+
 class ItemResponse(BaseModel):
     """Response body for GET /items/{item_id}."""
 
